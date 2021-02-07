@@ -15,8 +15,13 @@ class Particle{
             const ctx = canvas.getContext('2d');
             ctx.canvas.width = window.innerWidth;
             ctx.canvas.height = window.innerHeight;
+            this.drawCircle(ctx);
         }
-    
+    }
+    drawCircle(ctx){
+        ctx.beginPath();
+        ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+        ctx.stroke();
     }
 }
 CIRCLECOUNT = 10;
